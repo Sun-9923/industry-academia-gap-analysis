@@ -105,9 +105,11 @@ Score 1-5:
 
 Totals: `30-35 strong`, `23-29 promising`, `16-22 weak/underspecified`, `<16 low-value`. Confidence = evidence quality, not enthusiasm.
 
-## Default Output
+## Default Deliverable
 
-Use concise Markdown unless asked for HTML:
+Final deliverables must default to one standalone HTML report unless the user explicitly asks for plain Markdown or another format. Treat HTML as a hard requirement for reports, strategy memos, research agendas, artifacts, exportable deliverables, and any unspecified final output.
+
+Default HTML report sections:
 
 1. Thesis
 2. Operating system
@@ -118,10 +120,13 @@ Use concise Markdown unless asked for HTML:
 7. Research opportunities
 8. Systems implications
 9. What not to conclude
+10. References, when sources are used or requested
 
-## HTML Report Mode
+Use concise Markdown only when the user explicitly asks for plain Markdown, notes, a brief answer, or another non-HTML format.
 
-When asked for a report, webpage, artifact, HTML, exportable deliverable, or polished long-form output, produce one standalone semantic HTML document with embedded lightweight CSS. No heavy frameworks; no unnecessary JS. Mermaid is optional only when it clarifies a system map.
+## HTML Report Requirements
+
+Produce one standalone semantic HTML document with embedded lightweight CSS. No heavy frameworks; no unnecessary JS. Mermaid is optional only when it clarifies a system map.
 
 Required sections: executive summary; scope/assumptions; operating-system map; constraint matrix; academic paradigm; mismatch map; gap taxonomy; opportunity ranking; systems implications; what not to conclude; references.
 
@@ -174,6 +179,7 @@ Revise if output:
 Before final output:
 
 ```text
+Standalone HTML by default unless user explicitly requested another format?
 System named? Constraints concrete? Assumptions explicit? Mechanisms causal?
 Taxonomy applied? Opportunities ranked/scored? Validation paths included?
 References real/linked when cited? No hype, paper-listing, or benchmark-production confusion?

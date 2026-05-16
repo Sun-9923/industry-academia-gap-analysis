@@ -25,7 +25,7 @@ Use this skill when you need to:
 - Turn practitioner pain points into rigorous research questions.
 - Evaluate whether academic benchmarks reflect production constraints.
 - Identify missing evaluation dimensions such as cost, risk, robustness, workflow, governance, or lifecycle behavior.
-- Produce a structured gap analysis for a report, strategy memo, research agenda, or HTML deliverable.
+- Produce a structured gap analysis as a standalone HTML report by default.
 
 Do not use it for generic paper lists, hype summaries, algorithm-only comparisons, or broad business analysis without concrete system constraints.
 
@@ -39,11 +39,17 @@ Do not use it for generic paper lists, hype summaries, algorithm-only comparison
 6. **Synthesize opportunities**: convert high-leverage gaps into researchable questions, evaluations, benchmarks, system designs, or theory.
 7. **Run the quality gate**: verify that constraints, assumptions, mechanisms, consequences, validation paths, and references are explicit.
 
-## Output Modes
+## Output Requirements
 
-### Markdown
+### Default HTML Report
 
-Default mode. Produces concise structured Markdown with:
+Final deliverables default to one standalone semantic HTML report unless the user explicitly asks for plain Markdown or another format. The report includes embedded lightweight CSS, print styles, responsive layout, tables, callouts, and references.
+
+Required report sections include executive summary, scope and assumptions, operating-system map, constraint matrix, academic paradigm, mismatch map, gap taxonomy, opportunity ranking, systems implications, what not to conclude, and references when sources are used or requested.
+
+### Explicit Markdown Mode
+
+Use only when the user explicitly asks for plain Markdown, notes, a brief answer, or another non-HTML format. Produces concise structured Markdown with:
 
 1. Thesis
 2. Operating system
@@ -54,12 +60,6 @@ Default mode. Produces concise structured Markdown with:
 7. Research opportunities
 8. Systems implications
 9. What not to conclude
-
-### HTML Report
-
-Use when the user asks for a report, webpage, artifact, exportable deliverable, or polished long-form output. The skill produces one standalone semantic HTML document with embedded lightweight CSS, print styles, responsive layout, tables, callouts, and references.
-
-Required report sections include executive summary, scope and assumptions, operating-system map, constraint matrix, academic paradigm, mismatch map, gap taxonomy, opportunity ranking, systems implications, what not to conclude, and references.
 
 ## Gap Taxonomy
 
@@ -85,10 +85,10 @@ Use the industry-academia-gap-analysis skill.
 
 Topic: Retrieval-augmented generation for enterprise customer support.
 Goal: Identify gaps between current academic RAG evaluation and production support operations.
-Output: HTML report with opportunity ranking and references.
+Output: Standalone HTML report with opportunity ranking and references.
 Focus on: data drift, support workflow handoffs, latency/cost tradeoffs, auditability, incident handling, and user trust.
 ```
 
 ## Quality Bar
 
-Strong outputs name the system, make assumptions explicit, connect constraints to academic assumptions causally, classify each gap, rank opportunities with validation paths, and avoid treating benchmark gains as production readiness.
+Strong outputs default to standalone HTML, name the system, make assumptions explicit, connect constraints to academic assumptions causally, classify each gap, rank opportunities with validation paths, cite real linked references when used, and avoid treating benchmark gains as production readiness.
